@@ -43,7 +43,7 @@ int main() {
         int index = linearSearch(dataset, elementSearch[i]);
         auto stop = high_resolution_clock::now();
         auto duration = duration_cast<microseconds>(stop - start);
-        cout << "Linear search for " << elementSearch[i] << ". Time took " << (static_cast<float>(duration.count()))/1000000 << " seconds." << endl;
+        cout << "Linear search for " << elementSearch[i] << ". Time took " << (static_cast<float>(duration.count()))/1000000 << " seconds. Index: " << index << endl;
     }
 
     // Binary Search
@@ -52,7 +52,7 @@ int main() {
         int index = binarySearch(dataset, elementSearch[i]);
         auto stop = high_resolution_clock::now();
         auto duration = duration_cast<microseconds>(stop - start);
-        cout << "Binary search for " << elementSearch[i] << ". Time took " << (static_cast<float>(duration.count()))/1000000 << " seconds." << endl;
+        cout << "Binary search for " << elementSearch[i] << ". Time took " << (static_cast<float>(duration.count()))/1000000 << " seconds. Index: " << index << endl;
     }
     return 0;
 }
